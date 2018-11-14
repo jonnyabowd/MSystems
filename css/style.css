@@ -243,14 +243,13 @@ a.whiteLink {
     .navLinks {
         margin: 0 10px 10px;
         width: 100%;
-        display: flex;
-        justify-content: space-around;
+        display: grid;
+        grid-template-columns: 50% 50%;
     }
 
     .navLink {
         font-size: 24px;
         text-align: center;
-        flex-grow: 1;
     }
 
     .hero {
