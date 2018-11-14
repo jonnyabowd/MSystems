@@ -123,6 +123,7 @@ p.serviceDescription {
     line-height: 36px;
     padding: 0 40px;
     text-align: center;
+    text-shadow: 0 0 10px var(--yellow);
 }
 
 .services {
