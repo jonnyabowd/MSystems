@@ -1,7 +1,17 @@
+:root {
+    --yellow: hsl(46, 100%, 50%);
+    --grey: hsl(0, 0%, 20%);
+    --grey-dk: hsl(0, 0%, 10%);
+    --grey-med: hsl(222, 10%, 74%);
+    --grey-lt: hsl(222, 10%, 84%);
+    --font-base: 'Podkova', Georgia, serif;
+    --font-display: 'Teko', sans-serif;
+}
+
 html,
 body {
-    font-family: 'Podkova', Georgia, serif;
-    background-color: hsl(0, 0%, 20%);
+    font-family: var(--font-base);
+    background-color: var(--grey);
 }
 
 /* Navigation */
@@ -9,10 +19,10 @@ body {
 .navBar {
     position: fixed;
     width: 100%;
-    background-color: hsl(222, 10%, 74%);
-    border-top: hsl(222, 10%, 84%) 3px solid;
-    border-bottom: hsl(46, 100%, 50%) 3px solid;
-    box-shadow: 0 5px 20px 0 hsl(0, 0%, 20%, 0.5);
+    background-color: var(--grey-med);
+    border-top: var(--grey-lt) 3px solid;
+    border-bottom: var(--yellow) 5px solid;
+    box-shadow: 0 5px 40px 0 hsl(0, 0%, 20%, 0.8);
 }
 
 .navContent {
@@ -34,12 +44,13 @@ body {
     font-weight: 400;
     font-size: 28px;
     text-transform: uppercase;
-    color: hsl(0, 0%, 20%);
+    color: var(--grey);
     text-decoration: none;
     margin: 0 10px;
-    padding: 0 10px;
+    padding: 4px 14px 0;
+    /* border: var(--grey) 2px solid; */
     border-radius: 4px;
-    background-color: hsl(222, 10%, 84%);
+    background-color: var(--grey-lt);
 }
 
 .navLink:hover {
@@ -58,16 +69,17 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow: inset 0 -20px 80px 0 hsla(0, 0%, 20%, 0.8);
 }
 
 .motto {
-    font-family: 'Teko', sans-serif;
+    font-family: var(--font-display);
     font-weight: 400;
     font-size: 40px;
     text-transform: uppercase;
-    color: hsl(46, 100%, 50%);
+    color: var(--yellow);
     background-color: hsla(0, 0%, 20%, .6);
-    border: hsl(46, 100%, 50%) 5px solid;
+    border: var(--yellow) 5px solid;
     padding: 20px 20px 10px 20px;
     margin: 20px;
 }
@@ -79,15 +91,18 @@ body {
     height: 40px;
     background: repeating-linear-gradient(
         135deg,
-        hsl(46, 100%, 50%),
-        hsl(46, 100%, 50%) 20px,
-        hsla(0, 0%, 20%, 1.0) 20px,
-        hsla(0, 0%, 20%, 1.0) 40px
+        var(--yellow),
+        var(--yellow) 20px,
+        var(--grey) 20px,
+        var(--grey) 40px
     );
 }
 
 .servicesSection {
-    background-color: hsl(46, 100%, 50%);
+    background-color: var(--yellow);
+    background-image: url(../img/msystems-background.jpg);
+    background-size: cover;
+    background-position: center;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -95,19 +110,19 @@ body {
 }
 
 h1 {
-    font-family: 'Teko', sans-serif;
+    font-family: var(--font-display);
     font-weight: 700;
-    font-size: 54px;
+    font-size: 78px;
     text-transform: uppercase;
     text-decoration: underline;
     text-align: center;
-    margin: 40px 0 0 0;
+    margin: 40px 0 0;
 }
 
 p.serviceDescription {
-    max-width: 940px;
-    font-size: 22px;
-    line-height: 33px;
+    max-width: 600px;
+    font-size: 24px;
+    line-height: 36px;
     padding: 0 40px;
     text-align: center;
 }
@@ -131,7 +146,7 @@ p.serviceDescription {
     padding: 30px;
     margin: 20px;
     border-radius: 20px;
-    box-shadow: 0 2px 40px 0 hsla(33, 100%, 26%, 0.5), inset 0 -2px 50px 0 hsla(0, 0%, 20%, 0.2);
+    box-shadow: 0 8px 40px 0 hsla(33, 100%, 26%, 0.8), 0 4px 10px 0 hsla(33, 100%, 16%, 0.8), inset 0 -2px 50px 0 hsla(0, 0%, 20%, 0.2);
 }
 
 .serviceImage {
@@ -139,11 +154,11 @@ p.serviceDescription {
 }
 
 h2 {
-    font-family: 'Teko', sans-serif;
+    font-family: var(--font-display);
     font-weight: 700;
     font-size: 32px;
     text-transform: uppercase;
-    border-left: hsl(46, 100%, 50%) 6px solid;
+    border-left: var(--yellow) 10px solid;
     padding-left: 10px;
     margin: 10px 0 0 0;
 }
@@ -154,27 +169,28 @@ p.description {
     margin: 10px 0 0 0;
 }
 
-.estimate {
-    font-family: 'Teko', sans-serif;
+.estimateBtn {
+    font-family: var(--font-display);
     font-weight: 400;
     font-size: 40px;
     text-transform: uppercase;
     text-decoration: none;
-    color: hsl(0, 0%, 20%);
-    border: hsl(0, 0%, 20%) 3px solid;
+    color: var(--grey);
+    background-color: var(--yellow);
+    border: var(--grey) 3px solid;
     border-radius: 5px;
     padding: 10px 30px 4px;
     margin: 20px 0 80px 0;
 }
 
 a.galleryLink {
-    color: hsl(0, 0%, 20%);
+    color: var(--grey);
 }
 
 /* About Us section */
 
 section.about {
-    color: hsl(46, 100%, 50%);
+    color: var(--yellow);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -187,13 +203,12 @@ img.aboutUs {
 }
 
 div.aboutUs {
-    border-left: hsl(46, 100%, 50%) 5px solid;
+    border-left: var(--yellow) 10px solid;
     font-size: 18px;
     line-height: 24px;
-    /* width: 60%; */
     max-width: 800px;
     margin: -100px 100px 100px;
-    background-color: hsl(0, 0%, 20%);
+    background-color: var(--grey);
     padding: 0 30px;
 }
 
@@ -243,6 +258,8 @@ a.whiteLink {
 
     .navLink {
         font-size: 24px;
+        text-align: center;
+        flex-grow: 1;
     }
 
     .hero {
