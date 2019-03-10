@@ -46,9 +46,8 @@ body {
     text-transform: uppercase;
     color: var(--grey);
     text-decoration: none;
-    margin: 0 10px;
+    margin: 0 20px;
     padding: 4px 14px 0;
-    /* border: var(--grey) 2px solid; */
     border-radius: 4px;
     background-color: var(--grey-lt);
 }
@@ -166,9 +165,9 @@ p.description {
     font-size: 40px;
     text-transform: uppercase;
     text-decoration: none;
-    color: var(--grey);
+    color: var(--grey-dk);
     background-color: var(--yellow);
-    border: var(--grey) 3px solid;
+    border: var(--grey-dk) 3px solid;
     border-radius: 5px;
     padding: 10px 30px 4px;
     margin: 20px 0 80px 0;
@@ -232,23 +231,24 @@ a.whiteLink {
 
     .navContent {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
     }
 
     .logo {
-        height: 60px;
+        height: 40px;
         margin: 10px 20px;
     }
 
     .navLinks {
-        margin: 0 10px 10px;
+        margin: 10px 10px;
         width: 100%;
+        display: flex;
         display: grid;
-        grid-template-columns: 50% 50%;
+        grid-template-columns: 100%;
     }
 
     .navLink {
-        font-size: 24px;
+        font-size: 18px;
         text-align: center;
     }
 
@@ -256,9 +256,16 @@ a.whiteLink {
         padding-top: 125px;
     }
 
+    h1 {
+        font-size: 48px;
+    }
+
     p.serviceDescription {
-        padding: 0 70px;
+        font-size: 18px;
+        line-height: 24px;
+        padding: 0 20px;
         text-align: left;
+        text-shadow: 0 0 10px var(--yellow);
     }
 
     .services {
@@ -268,7 +275,7 @@ a.whiteLink {
 
     .serviceCard {
         max-width: 100%;
-        margin: 20px 40px;
+        margin: 20px 20px;
     }
 
     img.aboutUs {
