@@ -22,7 +22,7 @@ body {
     background-color: var(--grey-med);
     border-top: var(--grey-lt) 3px solid;
     border-bottom: var(--yellow) 5px solid;
-    box-shadow: 0 5px 40px 0 hsl(0, 0%, 20%, 0.8);
+    box-shadow: 0 0 10px 8px hsl(0, 0%, 16%, 0.5);
 }
 
 .navContent {
@@ -47,9 +47,10 @@ body {
     color: var(--grey);
     text-decoration: none;
     margin: 0 20px;
-    padding: 4px 14px 0;
+    padding: 4px 40px 0;
     border-radius: 4px;
     background-color: var(--grey-lt);
+    box-shadow: 0 4px 10px 0 hsla(0, 0%, 20%, 0.8), inset 0 -2px 50px 0 hsla(0, 0%, 20%, 0.2);
 }
 
 .navLink:hover {
@@ -248,7 +249,8 @@ a.whiteLink {
     }
 
     .navLink {
-        font-size: 18px;
+        font-size: 22px;
+        padding: 6px 0 4px;
         text-align: center;
     }
 
@@ -284,7 +286,7 @@ a.whiteLink {
     }
 
     div.aboutUs {
-        margin: -60px 40px 100px;
+        margin: -60px 20px 100px;
         padding: 0 30px;
     }
 
